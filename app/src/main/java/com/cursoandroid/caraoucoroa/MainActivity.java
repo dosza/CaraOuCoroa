@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
         jogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ResultadoActivity.class);
-                intent.putExtra("numero",new Random().nextInt(2));
+                Intent intent = new Intent(getApplicationContext(),EscolhaActivity.class);
                 startActivity(intent);
 
             }
