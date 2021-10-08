@@ -22,6 +22,7 @@ public class ResultadoActivity extends AppCompatActivity {
 
         Bundle dados = getIntent().getExtras();
         int flag = dados.getInt("numero");
+        int escolhaUsuario = dados.getInt("usuarioescolha");
        // Toast.makeText(getApplicationContext(),Integer.toString(flag),Toast.LENGTH_SHORT).show();
         image = findViewById(R.id.imageResultado);
         botaoVoltar = findViewById(R.id.botaoVoltar);
@@ -36,6 +37,11 @@ public class ResultadoActivity extends AppCompatActivity {
             image.setImageResource(R.drawable.moeda_cara);
         }else{
             image.setImageResource(R.drawable.moeda_coroa);
+        }
+        if ( flag == escolhaUsuario){
+            Toast.makeText(getApplicationContext(),"Você venceu !!",Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(getApplicationContext(),"Você perdeu !!",Toast.LENGTH_SHORT).show();
         }
     }
 }
