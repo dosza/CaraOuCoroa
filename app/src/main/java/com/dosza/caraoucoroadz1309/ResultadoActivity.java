@@ -1,15 +1,12 @@
-package com.cursoandroid.caraoucoroa;
+package com.dosza.caraoucoroadz1309;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import java.util.Random;
 
 public class ResultadoActivity extends AppCompatActivity {
     private ImageView image;
@@ -39,9 +36,9 @@ public class ResultadoActivity extends AppCompatActivity {
             image.setImageResource(R.drawable.moeda_coroa);
         }
         if ( flag == escolhaUsuario){
-            Toast.makeText(getApplicationContext(),"Você venceu !!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Você venceu !!",Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(getApplicationContext(),"Você perdeu !!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Você perdeu !!",Toast.LENGTH_LONG).show();
         }
     }
 }
