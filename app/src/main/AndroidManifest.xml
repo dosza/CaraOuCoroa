@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dosza.caraoucoroadz1309.EscolhaActivity"></activity>
-        <activity android:name="com.dosza.caraoucoroadz1309.ResultadoActivity" />
+        <activity android:name="com.dosza.caraoucoroadz1309.EscolhaActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.dosza.caraoucoroadz1309.ResultadoActivity" android:screenOrientation="portrait" />
         <activity
             android:name="com.dosza.caraoucoroadz1309.MainActivity"
             android:screenOrientation="portrait">
