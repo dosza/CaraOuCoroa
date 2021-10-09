@@ -1,17 +1,11 @@
 package com.dosza.caraoucoroadz1309;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.drawable.Animatable;
-import android.graphics.drawable.AnimatedImageDrawable;
-import android.graphics.drawable.AnimationDrawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -31,9 +25,9 @@ public class ResultadoActivity extends AppCompatActivity {
             image.setImageResource(R.drawable.moeda_coroa);
 
         if ( resultado == escolhaUsuario)
-            textResult.setText("Você venceu!!");
+            textResult.setText("Você venceu \uD83D\uDE04️!!");
         else
-            textResult.setText("Você perdeu!!");
+            textResult.setText("Você perdeu \uD83D\uDE25️!!");
     }
 
     @Override
@@ -46,7 +40,7 @@ public class ResultadoActivity extends AppCompatActivity {
         resultado = new Random().nextInt(2);
         escolhaUsuario = dados.getInt("usuarioescolha");
         textResult = findViewById(R.id.textResult);
-        image = (ImageView) findViewById(R.id.imageResultado);
+        image =  findViewById(R.id.imageResultado);
 
 
         botaoVoltar = findViewById(R.id.botaoVoltar);
