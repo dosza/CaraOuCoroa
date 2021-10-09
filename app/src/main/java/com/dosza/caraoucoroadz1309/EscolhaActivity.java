@@ -34,7 +34,6 @@ public class EscolhaActivity extends AppCompatActivity {
     }
     public void iniciaJogo(){
         Intent intent = new Intent(getApplicationContext(),ResultadoActivity.class);
-        intent.putExtra("numero", new Random().nextInt(2));
         intent.putExtra("usuarioescolha",escolhaUsuario);
         startActivity(intent);
     }

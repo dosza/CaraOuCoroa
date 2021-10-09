@@ -13,10 +13,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class ResultadoActivity extends AppCompatActivity {
 
     private ImageView image;
     private Button botaoVoltar;
+    private TextView textResult;
+    private int resultado;
+    private int escolhaUsuario;
+
+    //função jogar
+    public void jogar(){
+        if ( resultado == 0)
+            image.setImageResource(R.drawable.moeda_cara);
+        else
+            image.setImageResource(R.drawable.moeda_coroa);
+
+        if ( resultado == escolhaUsuario)
+            textResult.setText("Você venceu!!");
+        else
+            textResult.setText("Você perdeu!!");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +43,9 @@ public class ResultadoActivity extends AppCompatActivity {
 
 
         Bundle dados = getIntent().getExtras();
-        int flag = dados.getInt("numero");
-        int escolhaUsuario = dados.getInt("usuarioescolha");
-        TextView textResult = findViewById(R.id.textResult);
+        resultado = new Random().nextInt(2);
+        escolhaUsuario = dados.getInt("usuarioescolha");
+        textResult = findViewById(R.id.textResult);
         image = (ImageView) findViewById(R.id.imageResultado);
 
 
@@ -36,19 +54,10 @@ public class ResultadoActivity extends AppCompatActivity {
         botaoVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               finish();
+                finish();
             }
         });
 
-        if ( flag == 0){
-            image.setImageResource(R.drawable.moeda_cara);
-        }else{
-            image.setImageResource(R.drawable.moeda_coroa);
-        }
-        if ( flag == escolhaUsuario){
-            textResult.setText("Você venceu!!");
-        }else{
-            textResult.setText("Você perdeu!!");
-        }
+        jogar();
     }
 }
