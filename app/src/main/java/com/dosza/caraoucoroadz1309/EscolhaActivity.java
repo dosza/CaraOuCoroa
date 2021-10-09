@@ -38,6 +38,10 @@ public class EscolhaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void botaoSair(View view){
+        finish();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="248dp"
-        android:layout_height="115dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:contentDescription="Logotipo do Aplicativo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:contentDescription="Texto: faça sua escolha"
-        android:text="Faça sua escolha"
+        android:text="Faça sua escolha:"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="36sp"
@@ -47,7 +47,7 @@
         android:text="ou"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:fontFamily="@font/crete_round"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
@@ -80,5 +80,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/moeda_cara" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/botao_voltar"
+        android:onClick="botaoSair"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/botao_voltar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
