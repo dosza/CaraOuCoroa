@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="253dp"
+        android:layout_height="138dp"
         android:contentDescription="Logotipo do Aplicativo"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newlogotipo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="153dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -42,7 +43,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="Texto: ou"
         android:text="ou"
         android:textAllCaps="false"
@@ -59,7 +60,7 @@
         android:id="@+id/imageView2"
         android:layout_width="146dp"
         android:layout_height="126dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="Face coroa"
         android:onClick="setCoroa"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         android:id="@+id/imageView4"
         android:layout_width="146dp"
         android:layout_height="126dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="Face cara"
         android:onClick="setCara"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
@@ -84,12 +85,13 @@
     <ImageButton
         android:id="@+id/imageButton"
         style="@style/Widget.AppCompat.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/botao_voltar"
         android:contentDescription="Botão voltar"
         android:onClick="botaoSair"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"

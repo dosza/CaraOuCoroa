@@ -37,11 +37,10 @@ public class ResultadoActivity extends AppCompatActivity {
 
 
         Bundle dados = getIntent().getExtras();
-        resultado = new Random().nextInt(2);
         escolhaUsuario = dados.getInt("usuarioescolha");
         textResult = findViewById(R.id.textResult);
         image =  findViewById(R.id.imageResultado);
-
+        resultado = new Random().nextInt(2);
 
         botaoVoltar = findViewById(R.id.botaoVoltar);
 
