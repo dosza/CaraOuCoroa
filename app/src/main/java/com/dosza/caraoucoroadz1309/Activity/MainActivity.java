@@ -1,4 +1,4 @@
-package com.dosza.caraoucoroadz1309;
+package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.dosza.caraoucoroadz1309.Control.Pontuacao;
+import com.dosza.caraoucoroadz1309.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button jogar;
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+       Pontuacao.getInstance();
     }
 
     @Override

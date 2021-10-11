@@ -1,4 +1,4 @@
-package com.dosza.caraoucoroadz1309;
+package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,30 +6,38 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.Random;
+import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
+import com.dosza.caraoucoroadz1309.Control.Pontuacao;
+import com.dosza.caraoucoroadz1309.R;
 
 public class ResultadoActivity extends AppCompatActivity {
 
     private ImageView image;
     private Button botaoVoltar;
     private TextView textResult;
-    private int resultado;
+    private CaraCoroaJogo caraCoroaJogo;
     private int escolhaUsuario;
 
-    //função jogar
-    public void jogar(){
-        if ( resultado == 0)
+    public void mostraResultado(){
+        caraCoroaJogo.joga(escolhaUsuario);
+        if ( caraCoroaJogo.getFaceResultado() == CaraCoroaJogo.CARA ){
             image.setImageResource(R.drawable.moeda_cara);
-        else
+        }else{
             image.setImageResource(R.drawable.moeda_coroa);
-
-        if ( resultado == escolhaUsuario)
-            textResult.setText("Você venceu \uD83D\uDE04️!!");
-        else
-            textResult.setText("Você perdeu \uD83D\uDE25️!!");
+        }
+        if ( caraCoroaJogo.usuarioVenceu()){
+            textResult.setText("Você venceu !!");
+        }else{
+            textResult.setText("Você perdeu");
+        }
+        Pontuacao p = Pontuacao.getInstance();
+        String mensagem = "Total de partidas = "+ String.valueOf(p.getTotalPartidas())
+                +"\nTotal de vitórias = " + String.valueOf(p.getQtVitorias())
+                +"\nTotal de derrotas =" + String.valueOf(p.getQtDerrotas());
+        Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +48,7 @@ public class ResultadoActivity extends AppCompatActivity {
         escolhaUsuario = dados.getInt("usuarioescolha");
         textResult = findViewById(R.id.textResult);
         image =  findViewById(R.id.imageResultado);
-        resultado = new Random().nextInt(2);
-
+        caraCoroaJogo = new CaraCoroaJogo();
         botaoVoltar = findViewById(R.id.botaoVoltar);
 
         botaoVoltar.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +57,11 @@ public class ResultadoActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
-        jogar();
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mostraResultado();
     }
 }
