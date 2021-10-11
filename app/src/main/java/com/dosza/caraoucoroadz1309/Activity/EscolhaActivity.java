@@ -66,7 +66,7 @@ public class EscolhaActivity extends AppCompatActivity {
         dialog.setTitle("Resetar placar");
         dialog.setMessage("Gostaria de resetar o placar?");
         dialog.setCancelable(true);
-        dialog.setIcon(android.R.drawable.ic_btn_speak_now);
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
         dialog.setPositiveButton("sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -79,7 +79,7 @@ public class EscolhaActivity extends AppCompatActivity {
         dialog.setNegativeButton("não", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-               
+
             }
         });
         dialog.create();

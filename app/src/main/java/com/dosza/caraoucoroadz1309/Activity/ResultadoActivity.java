@@ -34,10 +34,6 @@ public class ResultadoActivity extends AppCompatActivity {
             textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
         Pontuacao p = Pontuacao.getInstance();
-        String mensagem = "Total de partidas = "+ String.valueOf(p.getTotalPartidas())
-                +"\nTotal de vitórias = " + String.valueOf(p.getQtVitorias())
-                +"\nTotal de derrotas = " + String.valueOf(p.getQtDerrotas());
-        //Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +46,6 @@ public class ResultadoActivity extends AppCompatActivity {
         textResult = findViewById(R.id.textResult);
         image =  findViewById(R.id.imageResultado);
         caraCoroaJogo = new CaraCoroaJogo();
-        botaoVoltar = findViewById(R.id.botaoVoltar);
-
-        botaoVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 
     @Override
@@ -70,5 +58,11 @@ public class ResultadoActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         caraCoroaJogo = null;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

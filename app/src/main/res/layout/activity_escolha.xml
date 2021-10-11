@@ -13,7 +13,7 @@
         tools:context=".Activity.EscolhaActivity">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageLogotipo"
             android:layout_width="253dp"
             android:layout_height="138dp"
             android:contentDescription="Logotipo do Aplicativo"
@@ -41,7 +41,7 @@
             app:fontFamily="@font/crete_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/imageLogotipo" />
 
         <TextView
             android:id="@+id/textView"
@@ -61,13 +61,13 @@
             app:fontFamily="@font/crete_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/imageLogotipo" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="64dp"
             android:contentDescription="Texto: ou"
             android:text="ou"
             android:textAllCaps="false"
@@ -161,6 +161,7 @@
             android:layout_marginBottom="16dp"
             android:clickable="true"
             android:onClick="abrirDialog"
+            app:backgroundTint="@android:color/holo_blue_bright"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textDerrotas"
