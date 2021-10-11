@@ -5,13 +5,13 @@ public class Pontuacao {
     private int qtVitorias;
     private int qtDerrotas;
 
-    private static  Pontuacao pontuacao;
+    private static  Pontuacao instanciaPontuacao;
 
     public static Pontuacao getInstance(){
-        if ( Pontuacao.pontuacao == null ){
-            pontuacao = new Pontuacao();
+        if ( Pontuacao.instanciaPontuacao == null ){
+            instanciaPontuacao = new Pontuacao();
         }
-        return pontuacao;
+        return instanciaPontuacao;
     }
 
     private Pontuacao(){

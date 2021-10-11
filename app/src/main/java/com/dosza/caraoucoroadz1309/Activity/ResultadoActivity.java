@@ -2,6 +2,7 @@ package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,7 +37,7 @@ public class ResultadoActivity extends AppCompatActivity {
         String mensagem = "Total de partidas = "+ String.valueOf(p.getTotalPartidas())
                 +"\nTotal de vitórias = " + String.valueOf(p.getQtVitorias())
                 +"\nTotal de derrotas = " + String.valueOf(p.getQtDerrotas());
-        Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

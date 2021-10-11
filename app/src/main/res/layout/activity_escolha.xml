@@ -10,8 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".Activity.EscolhaActivity"
-        >
+        tools:context=".Activity.EscolhaActivity">
 
         <ImageView
             android:id="@+id/imageView3"
@@ -26,6 +25,26 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="Texto: faça sua escolha"
+            android:text="Faça sua escolha:"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/crete_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -87,21 +106,65 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:srcCompat="@drawable/moeda_cara" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            style="@style/Widget.AppCompat.ImageButton"
-            android:layout_width="180dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/botao_voltar"
-            android:contentDescription="Botão voltar"
-            android:onClick="botaoSair"
-            android:scaleType="fitCenter"
+        <TextView
+            android:id="@+id/textVitorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="quantidade de vitórias"
+            android:text="Vitórias: 0"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/crete_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPlacar" />
+
+        <TextView
+            android:id="@+id/textDerrotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="quantidade de vitórias"
+            android:text="Derrotas: 0"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/crete_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:srcCompat="@drawable/botao_voltar" />
+            app:layout_constraintTop_toBottomOf="@+id/textVitorias" />
 
+        <TextView
+            android:id="@+id/textPlacar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="texto: Placar"
+            android:text="Placar:"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/crete_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:onClick="abrirDialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDerrotas"
+            app:srcCompat="@drawable/ic_reset_24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
