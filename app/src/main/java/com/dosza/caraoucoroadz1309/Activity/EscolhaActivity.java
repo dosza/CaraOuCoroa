@@ -6,11 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
 import com.dosza.caraoucoroadz1309.Control.Pontuacao;
 import com.dosza.caraoucoroadz1309.R;
@@ -56,8 +53,8 @@ public class EscolhaActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onStart() {
+        super.onStart();
         atualizaVisualizacaoPlacar();
     }
 
