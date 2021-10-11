@@ -32,4 +32,10 @@ public class EscolhaActivity extends AppCompatActivity {
     public void escolhaCoroa(View view){
         iniciaJogo(CaraCoroaJogo.COROA);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

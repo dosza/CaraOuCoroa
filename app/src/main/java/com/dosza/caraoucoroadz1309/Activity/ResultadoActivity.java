@@ -28,14 +28,14 @@ public class ResultadoActivity extends AppCompatActivity {
             image.setImageResource(R.drawable.moeda_coroa);
         }
         if ( caraCoroaJogo.usuarioVenceu()){
-            textResult.setText("Você venceu !!");
+            textResult.setText("Você venceu \uD83D\uDE04️!!");
         }else{
-            textResult.setText("Você perdeu");
+            textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
         Pontuacao p = Pontuacao.getInstance();
         String mensagem = "Total de partidas = "+ String.valueOf(p.getTotalPartidas())
                 +"\nTotal de vitórias = " + String.valueOf(p.getQtVitorias())
-                +"\nTotal de derrotas =" + String.valueOf(p.getQtDerrotas());
+                +"\nTotal de derrotas = " + String.valueOf(p.getQtDerrotas());
         Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
     }
     @Override
@@ -63,5 +63,11 @@ public class ResultadoActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mostraResultado();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        caraCoroaJogo = null;
     }
 }
