@@ -166,7 +166,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textDerrotas"
-            app:srcCompat="@drawable/ic_reset_24dp" />
+            app:srcCompat="@drawable/ic_reset_24dp"
+            android:focusable="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
