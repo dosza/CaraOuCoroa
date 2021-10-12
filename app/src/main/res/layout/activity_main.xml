@@ -8,10 +8,10 @@
     tools:context=".Activity.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageLogotipo1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:contentDescription="Logotipo do Aplicatiov"
+        android:contentDescription="@string/logotipo_content_description"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +28,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/botao_jogar"
-        android:contentDescription="Botão jogar"
+        android:contentDescription="@string/botaojogar_content_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLogotipo1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

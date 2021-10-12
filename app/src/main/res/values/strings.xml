@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Cara Ou Coroa</string>
+    <string name="logotipo_content_description">Logotipo do Aplicatiov</string>
+    <string name="botaojogar_content_description">Botão jogar</string>
+    <string name="texfacaescolha_description">Texto: faça sua escolha</string>
+    <string name="moeda_cara_description">Face cara</string>
+    <string name="moedacoroa_description">Face coroa</string>
+    <string name="textplacar_description">texto: Placar</string>
+    <string name="textvitorias_description">quantidade de vitórias</string>
+    <string name="textderrotas_description">quantidade de vitórias</string>
+    <string name="floatreset_description">Botão reset pontuação</string>
+    <string name="textresult_description">Resposta de Cara ou coroa</string>
+    <string name="imageresultado_description">Mostra a facec sorteada</string>
 </resources>
