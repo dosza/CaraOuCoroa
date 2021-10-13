@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Cara ou coroa?"
+            android:text="@string/textresult"
             android:textAllCaps="false"
             android:textColor="@color/corTexto"
             android:textSize="30sp"

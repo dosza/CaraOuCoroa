@@ -11,4 +11,10 @@
     <string name="floatreset_description">Botão reset pontuação</string>
     <string name="textresult_description">Resposta de Cara ou coroa</string>
     <string name="imageresultado_description">Mostra a facec sorteada</string>
+    <string name="textFacaEscolha">Faça sua escolha:</string>
+    <string name="textou_description">Texto: ou</string>
+    <string name="textplacar">Placar:</string>
+    <string name="textvitorias">Vitórias: 0</string>
+    <string name="textderrotas">Derrotas: 0</string>
+    <string name="textresult">Cara ou coroa?</string>
 </resources>
