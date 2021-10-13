@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
 import com.dosza.caraoucoroadz1309.Control.Pontuacao;
 import com.dosza.caraoucoroadz1309.R;
@@ -17,6 +18,7 @@ public class EscolhaActivity extends AppCompatActivity {
     private TextView textVitorias;
     private TextView textDerrotas;
     private Pontuacao pontuacao;
+
     public void iniciaJogo(int escolha){
         Intent intent = new Intent(getApplicationContext(),ResultadoActivity.class);
         intent.putExtra("escolhaUsuario",escolha);
@@ -24,7 +26,7 @@ public class EscolhaActivity extends AppCompatActivity {
         atualizaVisualizacaoPlacar();
     }
 
-    void atualizaVisualizacaoPlacar(){
+    public void atualizaVisualizacaoPlacar(){
         textVitorias.setText("Vitórias: "+ String.valueOf(pontuacao.getQtVitorias()));
         textDerrotas.setText("Derrotas: "+ String.valueOf(pontuacao.getQtDerrotas()));
     }

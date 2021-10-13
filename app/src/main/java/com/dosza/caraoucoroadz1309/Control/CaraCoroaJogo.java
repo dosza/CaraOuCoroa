@@ -1,5 +1,7 @@
 package com.dosza.caraoucoroadz1309.Control;
 
+import android.service.notification.NotificationListenerService;
+
 import java.util.Random;
 
 public class CaraCoroaJogo {
@@ -11,30 +13,31 @@ public class CaraCoroaJogo {
     private int faceResultado;
     private Pontuacao pontuacao;
 
-    public CaraCoroaJogo(){
-        faceResultado = -1;
-        faceUsuario = -1;
-        faceApp = -1;
+    public CaraCoroaJogo(int escolhaUsuario){
+        faceResultado = new Random().nextInt(CaraCoroaJogo.QTFACES);
+        faceUsuario = escolhaUsuario;
         pontuacao = Pontuacao.getInstance();
     }
-    public void joga(int escolhaUsuario){
-        this.faceUsuario = escolhaUsuario;
-        if ( this.faceUsuario == CaraCoroaJogo.CARA )
+    public void joga() {
+        if (this.faceUsuario == CaraCoroaJogo.CARA) {
             this.faceApp = CaraCoroaJogo.COROA;
-        else
+        } else {
             this.faceApp = CaraCoroaJogo.CARA;
-        this.faceResultado = new Random().nextInt(CaraCoroaJogo.QTFACES);
+        }
         atualizaPlacar();
-
-
-
     }
 
     public int getFaceResultado(){
         return faceResultado;
     }
+
+    public int getFaceUsuario() {
+        return faceUsuario;
+    }
+
     public boolean usuarioVenceu(){
-        return this.faceResultado == this.faceUsuario;
+        boolean venceu = (this.faceResultado == this.faceUsuario);
+        return venceu;
     }
     public void atualizaPlacar(){
         boolean venceu = this.usuarioVenceu();

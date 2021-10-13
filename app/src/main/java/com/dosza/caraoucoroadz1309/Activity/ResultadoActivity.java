@@ -2,6 +2,7 @@ package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,54 +19,52 @@ public class ResultadoActivity extends AppCompatActivity {
     private TextView textResult;
     private CaraCoroaJogo caraCoroaJogo;
     private int escolhaUsuario;
+    private Bundle dados;
 
     public void mostraResultado(){
-        caraCoroaJogo.joga(escolhaUsuario);
+
+        caraCoroaJogo.joga();
         if ( caraCoroaJogo.getFaceResultado() == CaraCoroaJogo.CARA ){
             image.setImageResource(R.drawable.moeda_cara);
         }else{
             image.setImageResource(R.drawable.moeda_coroa);
         }
+
         if ( caraCoroaJogo.usuarioVenceu()){
             textResult.setText("Você venceu \uD83D\uDE04️!!");
         }else{
             textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
-        Toast.makeText(getApplicationContext(), "Por favor, aguarde ...",Toast.LENGTH_SHORT).show();
-        voltarActivity();
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultado);
-
-
-        Bundle dados = getIntent().getExtras();
-        escolhaUsuario = dados.getInt("usuarioescolha");
-        textResult = findViewById(R.id.textResult);
-        image =  findViewById(R.id.imageResultado);
-        caraCoroaJogo = new CaraCoroaJogo();
-    }
-
-    public void voltarActivity(){
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
                 finish();
             }
-        },2000);
+        },1500);
     }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_resultado);
+        textResult = findViewById(R.id.textResult);
+        image =  findViewById(R.id.imageResultado);
+        dados = getIntent().getExtras();
+        escolhaUsuario = dados.getInt("escolhaUsuario");
+        caraCoroaJogo = new CaraCoroaJogo(escolhaUsuario);
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
+
 
     @Override
     protected void onStart() {
         super.onStart();
         mostraResultado();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        caraCoroaJogo = null;
     }
 
     @Override

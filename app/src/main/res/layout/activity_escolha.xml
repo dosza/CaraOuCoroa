@@ -75,13 +75,13 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="@font/crete_round"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/imageCoroa"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageCara"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageCoroa"
             android:layout_width="146dp"
             android:layout_height="126dp"
             android:layout_marginTop="24dp"
@@ -94,7 +94,7 @@
             app:srcCompat="@drawable/moeda_coroa" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageCara"
             android:layout_width="146dp"
             android:layout_height="126dp"
             android:layout_marginTop="24dp"
@@ -150,7 +150,7 @@
             app:fontFamily="@font/crete_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintTop_toBottomOf="@+id/imageCara" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatReset"
