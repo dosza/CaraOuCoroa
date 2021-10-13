@@ -2,17 +2,18 @@ package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
 import com.dosza.caraoucoroadz1309.Control.Pontuacao;
 import com.dosza.caraoucoroadz1309.R;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class ResultadoActivity extends AppCompatActivity {
 
     private ImageView image;
-    private Button botaoVoltar;
     private TextView textResult;
     private CaraCoroaJogo caraCoroaJogo;
     private int escolhaUsuario;
@@ -29,7 +30,8 @@ public class ResultadoActivity extends AppCompatActivity {
         }else{
             textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
-        Pontuacao p = Pontuacao.getInstance();
+
+        voltarActivity();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,15 @@ public class ResultadoActivity extends AppCompatActivity {
         textResult = findViewById(R.id.textResult);
         image =  findViewById(R.id.imageResultado);
         caraCoroaJogo = new CaraCoroaJogo();
+    }
+
+    public void voltarActivity(){
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+            }
+        },2000);
     }
 
     @Override

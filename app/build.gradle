@@ -7,8 +7,8 @@ android {
         applicationId "com.dosza.caraoucoroadz1309"
         minSdkVersion 15
         targetSdkVersion 30
-        versionCode 9
-        versionName "1.0.9-beta"
+        versionCode 10
+        versionName "1.0.10-beta"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
 
