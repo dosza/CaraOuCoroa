@@ -36,8 +36,8 @@ public class CaraCoroaJogo {
     }
 
     public boolean usuarioVenceu(){
-        boolean venceu = (this.faceResultado == this.faceUsuario);
-        return venceu;
+       return  (this.faceResultado == this.faceUsuario);
+
     }
     public void atualizaPlacar(){
         boolean venceu = this.usuarioVenceu();
@@ -51,6 +51,4 @@ public class CaraCoroaJogo {
         }
 
     }
-
-
 }

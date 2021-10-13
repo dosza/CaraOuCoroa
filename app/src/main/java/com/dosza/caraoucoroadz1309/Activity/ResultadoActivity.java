@@ -15,12 +15,21 @@ import java.util.TimerTask;
 
 public class ResultadoActivity extends AppCompatActivity {
 
+    public static final int TIMEOUT=1500;
     private ImageView image;
     private TextView textResult;
     private CaraCoroaJogo caraCoroaJogo;
     private int escolhaUsuario;
     private Bundle dados;
 
+    public void voltarActivity(){
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+            }
+        },ResultadoActivity.TIMEOUT);
+    }
     public void mostraResultado(){
 
         caraCoroaJogo.joga();
@@ -35,13 +44,9 @@ public class ResultadoActivity extends AppCompatActivity {
         }else{
             textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
-        new Timer().schedule(new TimerTask() {
-            @Override
-            public void run() {
-                finish();
-            }
-        },1500);
+        voltarActivity();
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
