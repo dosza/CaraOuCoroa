@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
-import com.dosza.caraoucoroadz1309.Control.Pontuacao;
 import com.dosza.caraoucoroadz1309.R;
 
 import java.util.Timer;

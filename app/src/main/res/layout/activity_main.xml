@@ -9,14 +9,14 @@
 
     <ImageView
         android:id="@+id/imageLogotipo1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="198dp"
         android:contentDescription="@string/logotipo_content_description"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newlogotipo" />
+        app:srcCompat="@drawable/newlogotipo_2x" />
 
     <Button
         android:id="@+id/buttonJogar"

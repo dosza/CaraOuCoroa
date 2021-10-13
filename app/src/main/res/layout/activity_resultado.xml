@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/newlogotipo"
+            app:srcCompat="@drawable/newlogotipo_2x"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -34,7 +34,7 @@
             android:layout_marginTop="32dp"
             android:text="Cara ou coroa?"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
+            android:textColor="@color/corTexto"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="@font/crete_round"

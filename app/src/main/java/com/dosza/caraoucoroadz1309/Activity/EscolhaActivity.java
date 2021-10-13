@@ -58,7 +58,7 @@ public class EscolhaActivity extends AppCompatActivity {
     }
 
     public void abrirDialog(View view) {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this); // esse metodo usa o contexto da activity atual (this)
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this, R.style.AlertDialog); // esse metodo usa o contexto da activity atual (this),
         dialog.setTitle("Resetar placar");
         dialog.setMessage("Gostaria de resetar o placar?");
         dialog.setCancelable(true);
