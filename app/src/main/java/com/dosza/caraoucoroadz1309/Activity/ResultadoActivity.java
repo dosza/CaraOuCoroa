@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
 import com.dosza.caraoucoroadz1309.R;
 
@@ -29,7 +31,7 @@ public class ResultadoActivity extends AppCompatActivity {
         }else{
             textResult.setText("Você perdeu \uD83D\uDE25️!!");
         }
-
+        Toast.makeText(getApplicationContext(), "Por favor, aguarde ...",Toast.LENGTH_SHORT).show();
         voltarActivity();
     }
     @Override
