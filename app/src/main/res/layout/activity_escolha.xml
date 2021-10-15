@@ -43,31 +43,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageLogotipo" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageCoroa"
             android:layout_width="146dp"
             android:layout_height="126dp"
             android:layout_marginTop="24dp"
             android:contentDescription="@string/moedacoroa_description"
-            android:background="@color/fundo"
             android:onClick="escolhaCoroa"
-            android:outlineAmbientShadowColor="@color/colorAccent"
-            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageCara"
             app:layout_constraintTop_toBottomOf="@+id/textFacaEscolha"
             app:srcCompat="@drawable/moeda_coroa" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageCara"
             android:layout_width="146dp"
             android:layout_height="126dp"
             android:layout_marginTop="24dp"
             android:contentDescription="@string/moeda_cara_description"
             android:onClick="escolheCara"
-            android:scaleType="centerCrop"
-            android:background="@color/fundo"
             app:layout_constraintEnd_toStartOf="@+id/imageCoroa"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -131,17 +126,11 @@
             android:contentDescription="@string/floatreset_description"
             android:focusable="true"
             android:onClick="abrirDialog"
-            app:backgroundTint="@android:color/holo_blue_bright"
+            app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textDerrotas"
             app:srcCompat="@drawable/ic_reset_24dp" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="75dp"
-            tools:layout_editor_absoluteY="336dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
