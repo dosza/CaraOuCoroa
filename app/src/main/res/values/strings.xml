@@ -17,4 +17,5 @@
     <string name="textvitorias">Vitórias: 0</string>
     <string name="textderrotas">Derrotas: 0</string>
     <string name="textresult">Cara ou coroa?</string>
+    <string name="buttonjogar_text">JOGAR</string>
 </resources>
