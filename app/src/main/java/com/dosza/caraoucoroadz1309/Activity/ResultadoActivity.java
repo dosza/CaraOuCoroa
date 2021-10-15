@@ -2,11 +2,8 @@ package com.dosza.caraoucoroadz1309.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.dosza.caraoucoroadz1309.Control.CaraCoroaJogo;
 import com.dosza.caraoucoroadz1309.R;
 
