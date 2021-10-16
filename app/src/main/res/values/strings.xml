@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Cara Ou Coroa</string>
-    <string name="logotipo_content_description">Logotipo do Aplicatiov</string>
+    <string name="logotipo_content_description">Logotipo do Aplicativo</string>
     <string name="botaojogar_content_description">Botão jogar</string>
     <string name="texfacaescolha_description">Texto: faça sua escolha</string>
     <string name="moeda_cara_description">Face cara</string>
@@ -18,4 +18,5 @@
     <string name="textderrotas">Derrotas: 0</string>
     <string name="textresult">Cara ou coroa?</string>
     <string name="buttonjogar_text">JOGAR</string>
+    <string name="imageResultado">Face sorteada</string>
 </resources>
