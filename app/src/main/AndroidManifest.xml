@@ -19,7 +19,7 @@
             />
         <activity
             android:name="com.dosza.caraoucoroadz1309.Activity.MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
